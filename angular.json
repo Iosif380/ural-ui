@@ -7,7 +7,13 @@
       "projectType": "library",
       "root": "projects/kit",
       "sourceRoot": "projects/kit/src",
-      "prefix": "lib",
+      "prefix": "u",
+      "schematics": {
+        "@schematics/angular:component": {
+          "styleext": "scss",
+          "changeDetection": "OnPush"
+        }
+      },
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:ng-packagr",
@@ -32,8 +38,13 @@
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
-            "tsConfig": ["projects/kit/tsconfig.lib.json", "projects/kit/tsconfig.spec.json"],
-            "exclude": ["**/node_modules/**"]
+            "tsConfig": [
+              "projects/kit/tsconfig.lib.json",
+              "projects/kit/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
           }
         }
       }
