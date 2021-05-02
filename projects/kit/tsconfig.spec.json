@@ -3,7 +3,7 @@
   "extends": "../../tsconfig.json",
   "compilerOptions": {
     "outDir": "../../out-tsc/spec",
-    "types": []
+    "types": ["jest", "node", "jsdom"]
   },
   "files": [],
   "include": ["**/*.spec.ts", "**/*.d.ts"]

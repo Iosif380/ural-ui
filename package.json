@@ -5,13 +5,14 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
-    "test": "ng test",
+    "build-storybook": "npm run docs:json && build-storybook",
+    "docs:json": "compodoc -p ./tsconfig.json -e json -d .",
     "fix:eslint": "eslint . --fix",
     "fix:prettier": "prettier --write .",
     "pre-commit": "lint-staged",
-    "docs:json": "compodoc -p ./tsconfig.json -e json -d .",
     "storybook": "npm run docs:json && start-storybook -p 6006",
-    "build-storybook": "npm run docs:json && build-storybook"
+    "test:kit-watch": "jest --watch --testPathPattern='projects/kit'",
+    "test:kit": "jest --testPathPattern='projects/kit'"
   },
   "lint-staged": {
     "*.(css|scss|html)": [
@@ -47,6 +48,7 @@
     "@storybook/addon-essentials": "^6.2.9",
     "@storybook/addon-links": "^6.2.9",
     "@storybook/angular": "^6.2.9",
+    "@types/jest": "^26.0.23",
     "@types/node": "^12.11.1",
     "@typescript-eslint/eslint-plugin": "^4.22.0",
     "@typescript-eslint/parser": "^4.22.0",
@@ -58,11 +60,14 @@
     "eslint-plugin-prettier": "^3.4.0",
     "eslint-plugin-unused-imports": "^1.1.1",
     "husky": "^6.0.0",
+    "jest": "^26.6.3",
+    "jest-preset-angular": "^8.4.0",
     "karma-coverage": "~2.0.3",
     "lint-staged": "^10.5.4",
     "ng-packagr": "^11.0.0",
     "prettier": "^2.2.1",
     "protractor": "~7.0.0",
+    "ts-jest": "^26.5.5",
     "ts-node": "~8.3.0",
     "typescript": "~4.1.2"
   }
