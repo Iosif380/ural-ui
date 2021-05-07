@@ -1,0 +1,64 @@
+@import '../../core/themes/theme.scss';
+
+:host(a) {
+  text-decoration-line: none;
+}
+
+:host(.u-button) {
+  display: inline-block;
+  color: #000;
+  appearance: none;
+  border: none;
+  border-radius: 3px;
+  font-size: 14px;
+  font-weight: 700;
+  font-family: sans-serif;
+  text-align: center;
+  white-space: nowrap;
+  cursor: pointer;
+
+  &.u-button-disabled {
+    opacity: 0.5;
+    cursor: default;
+  }
+
+  &.u-color-primary {
+    background-color: map-get($theme, primary);
+  }
+
+  &.u-color-accent {
+    background-color: gainsboro;
+    color: map-get($theme, accent);
+  }
+  &:not(.u-button-disabled):hover {
+    box-shadow: 0 5px 15px rgb(14 50 99 / 10%), 0 2px 4px rgb(14 50 99 / 15%);
+  }
+
+  &.u-size-s {
+    height: 35px;
+    line-height: 35px;
+    min-width: 0;
+    padding: 0 10px;
+  }
+
+  &.u-size-m {
+    height: 40px;
+    line-height: 40px;
+    min-width: 0;
+    padding: 0 16px;
+  }
+
+  &.u-size-l {
+    height: 52px;
+    line-height: 52px;
+    min-width: 0;
+    padding: 0 32px;
+  }
+
+  &.u-size-xl {
+    height: 60px;
+    line-height: 60px;
+    min-width: 0;
+    padding: 0 50px;
+  }
+}
