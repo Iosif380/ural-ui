@@ -9,7 +9,7 @@ import {
 } from 'projects/kit/core';
 
 class Button {
-  constructor(public _elementRef: ElementRef) {}
+  constructor(public _elementRef: ElementRef<HTMLButtonElement | HTMLAnchorElement>) {}
 }
 
 type ButtonMixin = HasDisabledConstructor &
