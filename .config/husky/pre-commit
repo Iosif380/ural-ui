@@ -2,5 +2,10 @@
 . "$(dirname "$0")/_/husky.sh"
 
 files=$(git diff --cached --name-only ':!*.json' ':!*gitignore*')
-npx cspell -- $files
-npm run pre-commit
+if [  -z "$files"]
+then
+      echo "\$files is empty"
+else
+      npx cspell -- $files
+      npm run pre-commit
+fi
