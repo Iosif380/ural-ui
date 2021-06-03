@@ -1,12 +1,6 @@
 {
-    "version": "0.1",
-    "language": "en, ru",
-    "dictionaries": [
-        "typescript",
-        "html",
-        "css"
-    ],
-    "words": [
-        "mixins"
-    ]
+  "version": "0.1",
+  "language": "en, ru",
+  "dictionaries": ["typescript", "html", "css"],
+  "words": ["mixins", "sonarjs"]
 }
