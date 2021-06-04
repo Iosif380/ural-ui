@@ -1,11 +1,9 @@
 import { moduleMetadata, Meta } from '@storybook/angular';
 
-import { ButtonComponent } from '../button.component';
 import { ButtonModule } from '../button.module';
 import { argTypes, TemplateFn, storyGenerator } from './base.stories';
 
 export default {
-  component: ButtonComponent,
   decorators: [
     moduleMetadata({
       imports: [ButtonModule],

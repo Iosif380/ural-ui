@@ -1,5 +1,4 @@
 import { ArgTypes, moduleMetadata } from '@storybook/angular';
-import { InputComponent } from './input.component';
 import { InputModule } from './input.module';
 
 const metadata = moduleMetadata({
@@ -21,7 +20,6 @@ const argTypes: ArgTypes = {
 
 export default {
   title: 'Input',
-  component: InputComponent,
   decorators: [metadata],
   argTypes,
 };
@@ -37,6 +35,4 @@ export const input = ({ size, value, disabled }: any = {}): unknown => ({
   props: { size, disabled },
 });
 
-input.story = {
-  name: 'Base',
-};
+input.storyName = 'Base';
