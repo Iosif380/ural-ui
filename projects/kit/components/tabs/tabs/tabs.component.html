@@ -1,0 +1,13 @@
+<ul class="tabs">
+  <li
+    class="tabs__item"
+    [class.tabs__item--active]="tab.isActive"
+    *ngFor="let tab of tabs"
+    (click)="selectTab(tab)"
+  >
+    {{ tab.caption }}
+  </li>
+</ul>
+<div class="tabs__content">
+  <ng-content></ng-content>
+</div>
