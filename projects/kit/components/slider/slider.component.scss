@@ -1,0 +1,23 @@
+.slider {
+  appearance: none;
+  width: 100%;
+  height: 2px;
+  background: #64b65b;
+  outline: none;
+  &::-webkit-slider-thumb {
+    appearance: none;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 0px 5px #64b65b inset;
+    background: white;
+    cursor: pointer;
+    transition: box-shadow 0.3s ease-in-out;
+  }
+}
+
+.slider:focus {
+  &::-webkit-slider-thumb {
+    box-shadow: 0px 0px 0px 3px #64b65b inset;
+  }
+}
