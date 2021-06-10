@@ -58,5 +58,7 @@ export class CheckboxComponent implements ControlValueAccessor {
     this._onChangeCb(value);
   }
 
-  public registerOnTouched(): void {}
+  public registerOnTouched(): void {
+    //
+  }
 }

@@ -1,6 +1,5 @@
 import { ArgTypes, moduleMetadata } from '@storybook/angular';
 import { TabsModule } from './tabs.module';
-import { TabsComponent } from './tabs/tabs.component';
 
 const metadata = moduleMetadata({
   imports: [TabsModule],
@@ -15,18 +14,17 @@ const argTypes: ArgTypes = {
   caption: {
     name: 'caption',
     defaultValue: 'Example tab ',
-    description: 'Отбражаемый заголовок вкладки.',
+    description: 'Отображаемый заголовок вкладки.',
   },
 };
 
 export default {
   title: 'Tabs',
-  component: TabsComponent,
   decorators: [metadata],
   argTypes,
 };
 
-export const Default = ({ name, caption }: any = {}): unknown => ({
+export const tabs = ({ name, caption }: any = {}): unknown => ({
   template: `
         <tabs>
             <tab [name]="name + 1" [caption]="caption + 1">
@@ -43,6 +41,4 @@ export const Default = ({ name, caption }: any = {}): unknown => ({
   props: { name, caption },
 });
 
-Default.story = {
-  name: 'component',
-};
+tabs.storyName = 'Base';

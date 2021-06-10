@@ -1,8 +1,17 @@
-<input class="checkbox-input" type="checkbox" [id]="id" [checked]="checked" (change)="handleChange($event)">
-<label class="checkbox-label" [for]="id"
-    [class.checkbox-label--position-right]="labelPosition === labelPositions.Right"
-    [class.checkbox-label--position-left]="labelPosition === labelPositions.Left"
-    [class.checkbox-label--position-ahead]="labelPosition === labelPositions.Ahead"
-    [class.checkbox-label--position-under]="labelPosition === labelPositions.Under">
-    <ng-content></ng-content>
+<input
+  class="checkbox-input"
+  type="checkbox"
+  [id]="id"
+  [checked]="checked"
+  (change)="handleChange($event)"
+/>
+<label
+  class="checkbox-label"
+  [for]="id"
+  [class.checkbox-label--position-right]="labelPosition === labelPositions.Right"
+  [class.checkbox-label--position-left]="labelPosition === labelPositions.Left"
+  [class.checkbox-label--position-ahead]="labelPosition === labelPositions.Ahead"
+  [class.checkbox-label--position-under]="labelPosition === labelPositions.Under"
+>
+  <ng-content></ng-content>
 </label>

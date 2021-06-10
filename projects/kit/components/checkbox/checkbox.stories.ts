@@ -1,6 +1,5 @@
 import { FormBuilder, FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { ArgTypes, moduleMetadata } from '@storybook/angular';
-import { CheckboxComponent } from './checkbox.component';
 import { CheckboxModule } from './checkbox.module';
 import { LabelPosition } from './label-position.enum';
 
@@ -24,18 +23,17 @@ const metadata = moduleMetadata({
 const argTypes: ArgTypes = {
   labelPosition: {
     defaultValue: LabelPosition.Right,
-    description: 'Расположение лэйбла относительно чекбокса',
+    description: 'Расположение label относительно чекбокса',
   },
 };
 
 export default {
   title: 'Checkbox',
-  component: CheckboxComponent,
   decorators: [metadata],
   argTypes,
 };
 
-export const Default = ({
+export const checkbox = ({
   form = new Form(new FormBuilder()),
   labelPosition,
 }: any = {}): unknown => ({
@@ -58,6 +56,4 @@ export const Default = ({
   props: { form, labelPosition },
 });
 
-Default.story = {
-  name: 'component',
-};
+checkbox.storyName = 'Base';
