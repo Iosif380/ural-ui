@@ -1,0 +1,123 @@
+$margin: 36px;
+$box-size: 22px;
+
+.checkbox-input {
+  display: none;
+}
+
+.checkbox-label {
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  user-select: none;
+
+  &--position-right {
+    margin-left: $margin;
+
+    &::before {
+      top: calc(50% - #{$box-size/2});
+      left: -#{$margin};
+    }
+
+    &::after {
+      top: 50%;
+      left: -31px;
+    }
+  }
+
+  &--position-left {
+    margin-right: $margin;
+
+    &::before {
+      top: calc(50% - #{$box-size/2});
+      right: -#{$margin};
+    }
+
+    &::after {
+      top: 50%;
+      right: -#{$margin - 11px};
+    }
+  }
+
+  &--position-ahead {
+    margin-bottom: $margin;
+
+    &::before {
+      left: 0;
+      bottom: -#{$margin};
+    }
+
+    &::after {
+      top: calc(100% + 23px);
+      left: 5px;
+    }
+  }
+
+  &--position-under {
+    margin-top: $margin;
+
+    &::before {
+      left: 0;
+      top: -#{$margin};
+    }
+
+    &::after {
+      top: -25px;
+      left: 5px;
+    }
+  }
+}
+
+.checkbox-input:not(:checked) + .checkbox-label:hover::before {
+  border-color: #64b65b;
+}
+
+.checkbox-label::before {
+  content: '';
+  display: block;
+  position: absolute;
+  width: $box-size;
+  height: $box-size;
+  border: 1px solid;
+  border-color: #dadada;
+  border-radius: 3px;
+  background-color: #fff;
+  transition: border-color 0.3s ease;
+}
+
+.checkbox-input:checked + .checkbox-label::before {
+  background-color: #64b65b;
+}
+
+.checkbox-label::after {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 6px;
+  height: 10px;
+  border-right: 2px solid transparent;
+  border-top: 2px solid transparent;
+  transform: scaleX(-1) rotate(135deg);
+  transform-origin: left top;
+  transition: border-color 0.3s ease;
+}
+
+.checkbox-input:checked + .checkbox-label::after {
+  border-color: #fff;
+  animation: check 0.8s;
+}
+
+@keyframes check {
+  0% {
+    height: 0;
+    width: 0;
+  }
+  25% {
+    height: 0;
+    width: 6px;
+  }
+  50% {
+    height: 10px;
+    width: 6px;
+  }
+}
