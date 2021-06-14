@@ -1,0 +1,25 @@
+.option {
+  background-color: #fff;
+  min-height: 52px;
+  padding: 0px 22px 0px 47px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: open-sans-regular, sans-serif;
+  transition: background-color 0.3s ease;
+}
+
+.option_selected {
+  background-color: rgb(0 0 0 / 12%);
+}
+
+.option:hover:not(.option_selected, .option_disabled) {
+  background-color: #f5f5f5;
+}
+
+.option_disabled {
+  background-color: #eaeaea47;
+  color: #bbbbbb;
+}

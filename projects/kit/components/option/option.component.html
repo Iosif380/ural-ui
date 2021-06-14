@@ -1,0 +1,10 @@
+<div
+  class="option"
+  [ngClass]="{
+    option_selected: selected,
+    option_disabled: disabled
+  }"
+  (click)="!disabled && selectToggle()"
+>
+  <ng-content></ng-content>
+</div>

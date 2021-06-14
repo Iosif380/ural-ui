@@ -1,0 +1,16 @@
+<div uClickOutside (clickOutside)="close()">
+  <div
+    tabindex="0"
+    class="select-value"
+    (focus)="open()"
+    (click)="open()"
+    [ngClass]="{ 'select-value-active': hasOpen }"
+  >
+    {{ viewValue | async }}
+  </div>
+  <div class="list-wrapper" *ngIf="hasOpen">
+    <div class="select-list" role="listbox">
+      <ng-content></ng-content>
+    </div>
+  </div>
+</div>
