@@ -1,3 +1,1 @@
-export * from './option.module';
-export * from './option.mixin';
-export * from './option.component';
+export * from './public-api';

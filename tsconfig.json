@@ -9,7 +9,10 @@
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
     "paths": {
-      "kit": ["dist/kit/kit", "dist/kit"]
+      "@ural-ui/core": ["projects/kit/core"],
+      "@ural-ui/core/*": ["projects/kit/core/*"],
+      "@ural-ui/components": ["projects/kit/components"],
+      "@ural-ui/components/*": ["projects/kit/components/*"]
     },
     "sourceMap": true,
     "declaration": false,

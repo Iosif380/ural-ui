@@ -1,5 +1,5 @@
 import { Component, ChangeDetectionStrategy, Input, Output, EventEmitter } from '@angular/core';
-import { castNumberProperty } from 'projects/kit/core/utils';
+import { castNumberProperty } from '@ural-ui/core/utils';
 
 @Component({
   selector: 'u-slider',

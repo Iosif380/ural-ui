@@ -1,6 +1,6 @@
 import { ChangeDetectorRef, ElementRef, EventEmitter } from '@angular/core';
-import { HasDisabledConstructor, mixinDisabled } from 'projects/kit/core';
-import { castBooleanProperty } from 'projects/kit/core/utils';
+import { HasDisabledConstructor, mixinDisabled } from '@ural-ui/core/common-behaviors';
+import { castBooleanProperty } from '@ural-ui/core/utils';
 
 export class Option {
   public value: unknown;

@@ -6,7 +6,7 @@ import {
   mixinColor,
   mixinDisabled,
   mixinSize,
-} from 'projects/kit/core';
+} from '@ural-ui/core/common-behaviors';
 
 class Button {
   constructor(public _elementRef: ElementRef<HTMLButtonElement | HTMLAnchorElement>) {}

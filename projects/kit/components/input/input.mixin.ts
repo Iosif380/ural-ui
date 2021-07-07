@@ -3,7 +3,7 @@ import {
   HasSizeConstructor,
   mixinDisabled,
   mixinSize,
-} from 'projects/kit/core';
+} from '@ural-ui/core/common-behaviors';
 
 import { ElementRef } from '@angular/core';
 
