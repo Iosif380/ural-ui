@@ -1,5 +1,5 @@
 {
-  "name": "kit",
+  "name": "@ural-ui/kit",
   "version": "0.0.1",
   "peerDependencies": {
     "@angular/common": "^11.2.11",
